@@ -1,0 +1,76 @@
+echo "# proyectofinal" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/PaolaFelix/proyectofinal.git
+git push -u origin main
+
+def funcion1():
+    
+    
+def funcion2():
+    try:
+        archivo = open('inventario',"r")
+        archivo.close()
+    except:
+        print("El archivo no existe")
+        exit(0)
+    archivo = open('inventario',"a")
+    nom = input("Escribe el nombre del producto ")
+    mod = int(input("Escribe el Modelo del producto "))
+    cant = input("Escribe la cantidad en existencia ")
+    archivo.write(str(mod)+ " " + str(nom) + " " + str(cant)+"\n")
+    archivo.close()
+    
+def funcion3():
+    a=0
+    
+def funcion4():
+    a=0
+    
+def funcion5():
+    try:
+        archivo = open('ventas',"r")
+        archivo.close()
+    except:
+        print("El archivo no existe")
+        exit(0)
+    archivo = open('ventas',"a")
+    nom = input("Escribe el nombre del producto ")
+    mod = int(input("Escribe el Modelo del producto "))
+    cant = input("Escribe la cantidad comprada ")
+    vend = input("Escribe el nombre del vendedor ")
+    archivo.write(str(mod)+ " " + str(nom) + " " + str(cant)+"\n")
+    archivo.close()
+    
+def funcion6():
+    a=0
+    
+c = "SI"
+while c.upper() == "SI":
+    print ("Menu:")
+    print ("a - Agregar nuevo vendedor")
+    print ("b - Registrar ventas")
+    print ("c - Registrar llegada de artículos al almacén")
+    print ("d - Consultar datos del inventario")
+    print ("e - Consultar datos de las ventas")
+    print ("f - Mostrar reportes de ventas por vendedor o por artículo")
+    op = input("")
+    op = op.lower()
+
+    if(op == "a"):
+        funcion1()
+    elif(op == "b"):
+        funcion2()
+    elif(op == "c"):
+        funcion3()
+    elif(op == "d"):
+        funcion4()
+    elif(op == "e"):
+        funcion5()
+    elif(op == "f"):
+        funcion6()
+    else:
+        print("Opcion incorrecta, Por favor ingrese una de las opciones de arriba")
+    c = input("Desea seguir realizando cambios: SI/NO ")
